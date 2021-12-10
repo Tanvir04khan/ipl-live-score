@@ -1,5 +1,3 @@
-import React from "react";
-
 import Home from "./components/home/Home";
 import NavigationBar from "./components/navigationBar/NavigationBar";
 import { Switch, Route } from "react-router-dom";
@@ -10,7 +8,9 @@ function App() {
     <>
       <NavigationBar />
       <Switch>
-        <Route path="/" component={Home} exact />
+        <Route path="/" exact>
+          <Home />
+        </Route>
         <Route path="/live-score" component={LiveScorePage} exact />
       </Switch>
     </>
